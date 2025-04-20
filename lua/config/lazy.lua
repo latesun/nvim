@@ -32,3 +32,9 @@ require("lazy").setup({
 		notify = false, -- disable notification when changes are found
 	},
 })
+
+-- Make background transparent
+vim.cmd([[
+  highlight Normal guibg=none ctermbg=none
+  highlight NonText guibg=none ctermbg=none
+]])
