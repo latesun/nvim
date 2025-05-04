@@ -3,7 +3,7 @@ return {
 	opts = {
 		formatters_by_ft = {
 			lua = { "stylua" },
-			markdown = { "mdslw" },
+			python = { "ruff format" },
 		},
 		format_on_save = {
 			async = false,
