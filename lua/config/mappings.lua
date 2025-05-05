@@ -13,6 +13,7 @@ map("n", "<leader>k", "<cmd> Interestingwords --toggle <CR>")
 map("n", "<leader>K", "<cmd> Interestingwords --remove_all <CR>")
 map("n", "<leader>e", "<cmd> NvimTreeToggle <CR>")
 map("n", "<leader>n", "<cmd> NvimTreeFindFile <CR>")
+map("n", "tt", "<cmd> AerialToggle <CR>", { desc = "Toggle Code Outline" })
 
 local builtin = require("telescope.builtin")
 map("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
