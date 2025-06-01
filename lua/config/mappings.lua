@@ -26,3 +26,9 @@ map("n", "<leader>gi", builtin.lsp_implementations, { desc = "Telescope LSP Impl
 map("n", "<leader>gr", builtin.lsp_references, { desc = "Telescope LSP References" })
 map("n", "<leader>go", builtin.diagnostics, { desc = "Telescope LSP Diagnostics" })
 map("n", "<leader>gs", builtin.lsp_document_symbols, { desc = "Telescope LSP Document Symbols" })
+
+local opts = { noremap = true, silent = true }
+map("n", "<C-h>", "<C-w>h", opts)
+map("n", "<C-j>", "<C-w>j", opts)
+map("n", "<C-k>", "<C-w>k", opts)
+map("n", "<C-l>", "<C-w>l", opts)
