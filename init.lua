@@ -3,7 +3,7 @@ require("config.mappings")
 require("config.options")
 
 vim.diagnostic.config({ virtual_text = true })
-vim.lsp.enable({ "lua_ls", "pylsp" })
+vim.lsp.enable({ "lua_ls", "pylsp", "ts_ls" })
 vim.api.nvim_create_autocmd("BufReadPost", {
 	callback = function()
 		local mark = vim.api.nvim_buf_get_mark(0, '"')
