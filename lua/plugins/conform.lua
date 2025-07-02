@@ -14,7 +14,7 @@ return {
 			json = { "prettier" },
 			lua = { "stylua" },
 			markdown = { "prettier" },
-			python = { "ruff" },
+			python = { "ruff", "isort" },
 			vue = { "prettier" },
 			typescript = { "prettier" },
 			yaml = { "prettier" },
