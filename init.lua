@@ -3,7 +3,7 @@ require("config.mappings")
 require("config.options")
 
 vim.diagnostic.config({ virtual_text = true })
-vim.lsp.enable({ "lua_ls", "pylsp", "ts_ls" })
+vim.lsp.enable({ "lua_ls", "pylsp", "ts_ls", "gopls" })
 vim.api.nvim_create_autocmd("BufReadPost", {
 	callback = function()
 		local mark = vim.api.nvim_buf_get_mark(0, '"')
@@ -13,5 +13,12 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 		if line > 0 and line <= vim.api.nvim_buf_line_count(0) and buf_name ~= "" then
 			pcall(vim.api.nvim_win_set_cursor, 0, { line, col })
 		end
+	end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "go", "lua", "python", "sql", "vue" },
+	callback = function()
+		vim.treesitter.start()
 	end,
 })

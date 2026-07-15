@@ -11,9 +11,11 @@ map("n", "<leader>l", "<cmd> Lazy <CR>")
 map("n", "<leader>m", "<cmd> Mason <CR>")
 map("n", "<leader>k", "<cmd> Interestingwords --toggle <CR>")
 map("n", "<leader>K", "<cmd> Interestingwords --remove_all <CR>")
-map("n", "<leader>e", "<cmd> NvimTreeToggle <CR>")
+map("n", "<leader>e", "<cmd> NvimTreeFindFileToggle <CR>")
 map("n", "<leader>n", "<cmd> NvimTreeFindFile <CR>")
+map("n", "<leader>rn", vim.lsp.buf.rename)
 map("n", "tt", "<cmd> AerialToggle <CR>", { desc = "Toggle Document Symbols" })
+map("v", "<leader>y", '"+y', { desc = "copy" })
 
 local builtin = require("telescope.builtin")
 map("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
@@ -26,6 +28,7 @@ map("n", "<leader>gi", builtin.lsp_implementations, { desc = "Telescope LSP Impl
 map("n", "<leader>gr", builtin.lsp_references, { desc = "Telescope LSP References" })
 map("n", "<leader>go", builtin.diagnostics, { desc = "Telescope LSP Diagnostics" })
 map("n", "<leader>gs", builtin.lsp_document_symbols, { desc = "Telescope LSP Document Symbols" })
+map("n", "<leader>tl", "<cmd> TodoTelescope <CR>", { desc = "Todo Comments" })
 
 local opts = { noremap = true, silent = true }
 map("n", "<C-h>", "<C-w>h", opts)

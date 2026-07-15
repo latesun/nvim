@@ -1,7 +1,8 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	branch = "main",
 	opts = {
-		ensure_installed = { "bash", "json", "lua", "markdown", "python", "toml", "yaml" },
+		ensure_installed = { "bash", "go", "json", "lua", "markdown", "python", "toml", "yaml" },
 		highlight = {
 			enable = true,
 			additional_vim_regex_highlighting = false,
@@ -10,10 +11,4 @@ return {
 			enable = true,
 		},
 	},
-	config = function(_, opts)
-		require("nvim-treesitter.configs").setup(opts)
-	end,
-	build = function()
-		require("nvim-treesitter.install").update({ with_sync = true })()
-	end,
 }
