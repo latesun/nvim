@@ -21,13 +21,16 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"
 
+vim.env.http_proxy = "http://127.0.0.1:10808"
+vim.env.https_proxy = "http://127.0.0.1:10808"
+
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 	},
 	-- automatically check for plugin updates
-	checker = { enabled = true },
+	checker = { enabled = false },
 	change_detection = {
 		notify = false, -- disable notification when changes are found
 	},
