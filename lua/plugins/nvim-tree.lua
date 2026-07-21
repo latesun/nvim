@@ -9,6 +9,9 @@ return {
 		filters = {
 			dotfiles = true,
 		},
+		view = {
+			width = 40, -- 默认是 30，调大即可
+		},
 	},
 	config = function()
 		require("nvim-tree").setup({})
