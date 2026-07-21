@@ -16,6 +16,12 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 	end,
 })
 
+vim.filetype.add({
+	extension = {
+		service = "dosini",
+	},
+})
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "go", "lua", "python", "sql", "vue" },
 	callback = function()
